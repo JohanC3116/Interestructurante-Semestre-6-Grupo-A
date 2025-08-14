@@ -30,8 +30,7 @@ El documento de requisitos describe de manera detallada el funcionamiento espera
 - Casos de uso y diagramas UML.  
 - Requerimientos funcionales y no funcionales.  
 - Modelos y diagramas de flujo de datos.  
-
-📂 **Documento:** [Abrir Documento de Requisitos](ENLACE_AQUI)  
+ 
 
 ---
 
@@ -41,8 +40,6 @@ En este apartado se presenta el diseño y estructura de la base de datos del sis
 - Diagrama lógico de la base de datos.  
 - Scripts SQL para la creación de tablas y relaciones.  
 - Descripción de cada entidad y su función en el sistema.  
-
-📂 **Modelo y Scripts:** [Ver Base de Datos](ENLACE_AQUI)  
 
 ---
 
@@ -54,14 +51,13 @@ Incluye:
 - Panel de usuario y secciones de control.  
 - Flujos de navegación principales.  
 
-🎨 **Prototipo:** [Ver Prototipo en Figma](ENLACE_AQUI)  
+🎨 **Prototipo:** [Ver Prototipo en Figma](https://www.figma.com/proto/w5QRaGU8Ei74zc495LqPPM/UI-Kit--Healthcare---Vixacare--Community-?node-id=1102-6342&p=f&t=xcQuy1d6wSBma2kZ-1&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2005&starting-point-node-id=399%3A22210)  
 
 ---
 
 ## 🛠️ Tecnologías y Herramientas Utilizadas  
 - **Documentación:** Microsoft Word / Google Docs.  
-- **Diseño de Base de Datos:** MySQL / SQLite / MariaDB (especificar).  
-- **Modelado MER y Lógico:** Draw.io / Lucidchart (especificar).  
+- **Diseño de Base de Datos:** MySQL.  
 - **Diseño UI/UX:** Figma.  
 
 ---
