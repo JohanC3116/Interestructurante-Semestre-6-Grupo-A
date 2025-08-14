@@ -1,70 +1,241 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reto EIE - TikTok</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; background-color: #f4f4f4; }
-    h1, h2 { color: #333; }
-    section { background-color: #fff; padding: 15px 20px; margin-bottom: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-  </style>
+<meta charset="UTF-8">
+<title>Documento de Requisitos - TikTok: Entre Diversión y Dependencia</title>
+<style>
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        background-color: #fff;
+        color: #111;
+        line-height: 1.6;
+    }
+    header {
+        text-align: center;
+        padding: 50px 20px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    header h1 {
+        font-size: 32px;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: -0.5px;
+    }
+    section {
+        width: 90%;
+        max-width: 1000px;
+        margin: 50px auto;
+    }
+    h2 {
+        font-size: 26px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        border-left: 4px solid #000;
+        padding-left: 10px;
+    }
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+    p, li {
+        font-size: 17px;
+    }
+    ul {
+        padding-left: 20px;
+    }
+    /* Tarjetas de módulos */
+    .module {
+        border: 1px solid #e5e5e5;
+        border-radius: 14px;
+        padding: 25px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    .module:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .icon {
+        font-size: 28px;
+        flex-shrink: 0;
+    }
+    .module h4 {
+        margin: 0 0 10px;
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .referencias a {
+        color: #000;
+        text-decoration: none;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 2px;
+    }
+    .referencias a:hover {
+        border-bottom: 1px solid #000;
+    }
+    /* Botón Figma */
+    .figma {
+        border: 1px dashed #aaa;
+        padding: 25px;
+        text-align: center;
+        background-color: #fafafa;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+    .figma a {
+        display: inline-block;
+        padding: 12px 24px;
+        background-color: #000;
+        color: white;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 16px;
+        transition: background-color 0.2s ease;
+    }
+    .figma a:hover {
+        background-color: #333;
+    }
+</style>
 </head>
 <body>
-  <h1>Reto EIE - TikTok: Entre Diversión y Dependencia</h1>
 
-  <section>
-    <h2>Descripción del Reto</h2>
-    <p>El proyecto busca enfrentar la creciente adicción a la plataforma TikTok, especialmente entre los jóvenes. Su algoritmo adictivo y el diseño de la interfaz incentivan el uso compulsivo, lo cual afecta la salud mental, la productividad y el bienestar emocional de los usuarios. El reto consiste en desarrollar una solución tecnológica que permita a los usuarios tener un control consciente sobre su uso de TikTok y otras redes sociales, promoviendo así hábitos digitales más saludables.</p>
-  </section>
+<header>
+    <h1>Documento de Requisitos<br>TikTok: Entre Diversión y Dependencia</h1>
+</header>
 
-  <section>
-    <h2>Objetivo General</h2>
-    <p>Desarrollar una aplicación que ayude a los usuarios a controlar el uso de TikTok mediante estadísticas de uso, recomendaciones personalizadas, alertas y recompensas, promoviendo así un uso más saludable y equilibrado de las redes sociales.</p>
-  </section>
+<section>
+    <h2>1. Contexto del Proyecto</h2>
+    <p>Este proyecto busca desarrollar una solución tecnológica que permita reducir la adicción digital, enfocándose en el uso saludable de TikTok. El objetivo es ayudar a los usuarios, especialmente jóvenes, a gestionar mejor su tiempo en redes sociales sin perder la calidad ni la creatividad de la experiencia.</p>
+</section>
 
-  <section>
-    <h2>Objetivos Específicos</h2>
+<section>
+    <h2>2. Objetivo General</h2>
+    <p>Desarrollar un sistema integral que ayude a los jóvenes a manejar su uso de TikTok, mediante una aplicación que registre su actividad, genere notificaciones y ofrezca recomendaciones y recompensas para un uso más responsable.</p>
+
+    <h3>Objetivos Específicos</h3>
     <ul>
-      <li>Definir los requerimientos del sistema con enfoque en la gestión del tiempo en redes sociales.</li>
-      <li>Diseñar una base de datos que almacene información sobre el uso de TikTok y otras redes.</li>
-      <li>Generar notificaciones personalizadas que promuevan el uso consciente.</li>
-      <li>Desarrollar recomendaciones y consejos basados en los patrones de uso recolectados.</li>
-      <li>Implementar un sistema de recompensas para incentivar el uso equilibrado de redes sociales.</li>
+        <li>Definir requisitos para monitorear y limitar el tiempo de uso, recopilando datos del comportamiento del usuario.</li>
+        <li>Diseñar una base de datos para almacenar información sobre sesiones e interacciones.</li>
+        <li>Generar notificaciones para informar y concientizar sobre el tiempo de uso.</li>
+        <li>Proponer buenas prácticas basadas en datos recopilados.</li>
+        <li>Implementar un sistema de recompensas para incentivar hábitos saludables.</li>
     </ul>
-  </section>
+</section>
 
-  <section>
-    <h2>Requisitos Funcionales</h2>
+<section>
+    <h2>3. Actores del Sistema</h2>
     <ul>
-      <li>El sistema debe registrar el tiempo de uso de TikTok.</li>
-      <li>Debe enviar notificaciones cuando se excedan los límites establecidos.</li>
-      <li>Debe permitir configurar metas de uso personalizadas.</li>
-      <li>Debe generar reportes visuales con estadísticas de uso.</li>
-      <li>Debe ofrecer recomendaciones personalizadas de uso saludable.</li>
-      <li>Debe permitir el registro de usuarios con perfil básico.</li>
+        <li><strong>Administrador:</strong> Control total de la plataforma, gestión de usuarios y configuración.</li>
+        <li><strong>Usuario Final:</strong> Persona que utiliza la aplicación para monitorear y mejorar su uso de TikTok.</li>
+        <li><strong>Sistema:</strong> Plataforma encargada de registrar datos, generar alertas y administrar recompensas.</li>
     </ul>
-  </section>
+</section>
 
-  <section>
-    <h2>Requisitos No Funcionales</h2>
-    <ul>
-      <li>La aplicación debe ser accesible desde dispositivos móviles Android y iOS.</li>
-      <li>Debe garantizar la privacidad de los datos del usuario.</li>
-      <li>Debe contar con una interfaz intuitiva y amigable.</li>
-      <li>El sistema debe tener alta disponibilidad y bajo tiempo de respuesta.</li>
-    </ul>
-  </section>
+<section>
+    <h2>4. Requisitos Funcionales</h2>
+    
+    <div class="module">
+        <div class="icon">🔐</div>
+        <div>
+            <h4>Módulo de Autenticación</h4>
+            <ul>
+                <li>Inicio de sesión con usuario y contraseña.</li>
+                <li>Bloqueo tras múltiples intentos fallidos.</li>
+                <li>Cierre automático por inactividad.</li>
+            </ul>
+        </div>
+    </div>
 
-  <section>
-    <h2>Requisitos de Información</h2>
+    <div class="module">
+        <div class="icon">📊</div>
+        <div>
+            <h4>Módulo de Registro de Uso</h4>
+            <ul>
+                <li>Registro de tiempo total en TikTok.</li>
+                <li>Historial diario, semanal y mensual.</li>
+                <li>Clasificación del tiempo por categorías de contenido.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="module">
+        <div class="icon">🔔</div>
+        <div>
+            <h4>Módulo de Notificaciones</h4>
+            <ul>
+                <li>Alertas sobre el límite de tiempo diario.</li>
+                <li>Recordatorios de pausas activas.</li>
+                <li>Mensajes motivacionales personalizados.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="module">
+        <div class="icon">💡</div>
+        <div>
+            <h4>Módulo de Recomendaciones</h4>
+            <ul>
+                <li>Sugerencias de actividades fuera de la app.</li>
+                <li>Guías de uso responsable.</li>
+                <li>Consejos basados en patrones de uso.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="module">
+        <div class="icon">🎯</div>
+        <div>
+            <h4>Módulo de Recompensas</h4>
+            <ul>
+                <li>Premios virtuales por cumplir objetivos.</li>
+                <li>Niveles de logro desbloqueables.</li>
+                <li>Historial de recompensas obtenidas.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>5. Requisitos No Funcionales</h2>
     <ul>
-      <li>Información del usuario (nombre, correo electrónico, edad).</li>
-      <li>Registro de tiempo de uso por día y por aplicación.</li>
-      <li>Preferencias del usuario sobre límites de uso y notificaciones.</li>
-      <li>Historial de reportes y recomendaciones ofrecidas.</li>
+        <li><strong>Usabilidad:</strong> Interfaces limpias e intuitivas.</li>
+        <li><strong>Seguridad:</strong> Cifrado de datos y control de acceso.</li>
+        <li><strong>Disponibilidad:</strong> Acceso al sistema el 99% del tiempo.</li>
+        <li><strong>Compatibilidad:</strong> Android, iOS y navegadores modernos.</li>
+        <li><strong>Mantenibilidad:</strong> Arquitectura modular y documentada.</li>
+        <li><strong>Rendimiento:</strong> Respuestas en menos de 3 segundos.</li>
     </ul>
-  </section>
+</section>
+
+<section>
+    <h2>6. Justificación</h2>
+    <p>La adicción a TikTok es un fenómeno global que afecta la salud mental y la productividad de millones de personas. Este sistema pretende abordar el problema de manera práctica, reduciendo la adicción sin perder el interés por la aplicación, y fomentando un uso equilibrado y saludable.</p>
+</section>
+
+<section>
+    <h2>7. Referencias Bibliográficas</h2>
+    <div class="referencias">
+        <p><a href="https://www.anahuac.mx/blog/adiccion-a-las-redes-sociales">Anáhuac - Adicción a las redes sociales</a></p>
+        <p><a href="https://www.menteamente.com/blog-salud-mental/adiccion-redes-sociales">MenteAmente - Adicción a las redes sociales</a></p>
+        <p><a href="https://internetaddictsanonymous.org/es/internet-and-technology-addiction/social-media-addiction/adiccion-al-tik-tok">Internet Addicts Anonymous - Adicción al TikTok</a></p>
+        <p><a href="https://orbiumadicciones.com/noticias/tiktok-y-su-potencial-adictivo/">Orbium Adicciones - TikTok y su potencial adictivo</a></p>
+        <p><a href="https://www.lasexta.com/noticias/sociedad/tik-tok-red-social-mas-adictiva">La Sexta - TikTok, red social más adictiva</a></p>
+        <p><a href="https://www.ondacero.es/noticias/sociedad/adictos-tiktok-que-tiene-mayor-capacidad-adiccion-que-tabaco">Onda Cero - Adictos a TikTok</a></p>
+    </div>
+</section>
+
+<section class="figma">
+    <a href="https://www.figma.com/proto/w5QRaGU8Ei74zc495LqPPM/UI-Kit--Healthcare---Vixacare--Community-?node-id=399-22210&t=t80JO4IeEChFRdDA-1&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2005&starting-point-node-id=399%3A22210" target="_blank">
+        Ver Prototipo en Figma
+    </a>
+</section>
 
 </body>
 </html>
