@@ -51,7 +51,7 @@ Incluye:
 - Panel de usuario y secciones de control.  
 - Flujos de navegación principales.  
 
-🎨 **Prototipo:** [Ver Prototipo en Figma](https://www.figma.com/proto/w5QRaGU8Ei74zc495LqPPM/UI-Kit--Healthcare---Vixacare--Community-?node-id=1102-6342&p=f&t=xcQuy1d6wSBma2kZ-1&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2005&starting-point-node-id=399%3A22210)  
+🎨 **Prototipo:** [Ver Prototipo en Figma](https://www.figma.com/proto/w5QRaGU8Ei74zc495LqPPM/UI-Kit--Healthcare---Vixacare--Community-?node-id=399-22210&t=t80JO4IeEChFRdDA-1&scaling=min-zoom&content-scaling=fixed&page-id=2%3A2005&starting-point-node-id=399%3A22210)  
 
 ---
 
