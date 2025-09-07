@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Documento de Requisitos - TikTok: Entre Diversión y Dependencia</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
     body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -25,7 +26,7 @@
     section {
         width: 90%;
         max-width: 1000px;
-        margin: 50px auto;
+        margin: 40px auto;
     }
     h2 {
         font-size: 26px;
@@ -49,8 +50,8 @@
     .module {
         border: 1px solid #e5e5e5;
         border-radius: 14px;
-        padding: 25px;
-        margin-bottom: 25px;
+        padding: 20px;
+        margin-bottom: 20px;
         box-shadow: 0 4px 14px rgba(0,0,0,0.06);
         transition: transform 0.2s ease, box-shadow 0.2s ease;
         display: flex;
@@ -87,6 +88,7 @@
         background-color: #fafafa;
         border-radius: 10px;
         margin-top: 30px;
+        margin-bottom: 60px;
     }
     .figma a {
         display: inline-block;
@@ -102,6 +104,18 @@
     .figma a:hover {
         background-color: #333;
     }
+    footer {
+        text-align: center;
+        padding: 30px 20px;
+        border-top: 1px solid #e5e5e5;
+        color: #666;
+        font-size: 14px;
+    }
+    @media (max-width:600px){
+        header { padding: 30px 10px; }
+        h2 { font-size: 20px; }
+        .module { padding: 15px; }
+    }
 </style>
 </head>
 <body>
@@ -111,50 +125,64 @@
 </header>
 
 <section>
-    <h2>Capitulo 1 Contexto del Proyecto</h2>
-    <p>Este proyecto tiene como propósito principal el desarrollo de una aplicación innovadora cuyo objetivo sea regular y optimizar el tiempo que los usuarios dedican a la red social TikTok, contribuyendo así a reducir la adicción digital y promover un uso más consciente de la plataforma. La propuesta se enfoca especialmente en adolescentes y jóvenes adultos, quienes son los grupos más propensos a un consumo excesivo de contenidos cortos y de alta frecuencia.
-La aplicación funcionará como una herramienta de acompañamiento digital que permitirá establecer límites personalizados de uso, enviar recordatorios inteligentes y ofrecer métricas claras sobre el tiempo invertido en TikTok. Lo distintivo de esta solución es que integrará un sistema de recompensas para motivar y reconocer a los usuarios que cumplan con las metas de uso saludable, fomentando así la autorregulación y la disciplina digital de una forma positiva y atractiva.
-A través de un diseño intuitivo, funciones de seguimiento en tiempo real y elementos de gamificación, la aplicación buscará no solo disminuir el tiempo excesivo de permanencia en TikTok, sino también incentivar el desarrollo de hábitos digitales equilibrados. De este modo, el proyecto apunta a mejorar el bienestar emocional y mental de los usuarios, reforzando su capacidad para gestionar el tiempo en entornos digitales sin renunciar a la creatividad y al entretenimiento que caracteriza a esta red social.
-</p>
-</section>
+    <h2>Capítulo 1: Introducción y Análisis del Negocio</h2>
 
-<section>
-    <h2>1.2 Objetivo General</h2>
-    <p>Desarrollar un sistema integral, en forma de aplicación móvil, orientado a ayudar a los jóvenes a gestionar de manera eficiente y saludable su uso de TikTok. La aplicación registrará y analizará la actividad del usuario en la plataforma, generando notificaciones oportunas y personalizadas que fomenten pausas, límites y hábitos de consumo equilibrado. 
-      Además, el sistema ofrecerá recomendaciones adaptadas al perfil y comportamiento de cada usuario, con el fin de promover un uso más consciente y controlado. Como elemento motivador, la aplicación incorporará un mecanismo de recompensas y logros que reconocerá a aquellos usuarios que cumplan con los objetivos de uso responsable previamente establecidos. 
-      Este enfoque busca no solo reducir la adicción digital y el consumo excesivo de TikTok, sino también incentivar una relación más saludable con las redes sociales, contribuyendo al bienestar emocional, mental y productivo de los jóvenes.</p>
-    <h3>1.3 Objetivos Específicos</h3>
+    <h3>1.1 Contexto del proyecto</h3>
+    <p>
+    Este proyecto tiene como propósito principal el desarrollo de una aplicación innovadora cuyo objetivo sea regular y optimizar el tiempo que los usuarios dedican a la red social TikTok, contribuyendo así a reducir la adicción digital y promover un uso más consciente de la plataforma. La propuesta se enfoca especialmente en adolescentes y jóvenes adultos, quienes son los grupos más propensos a un consumo excesivo de contenidos cortos y de alta frecuencia.
+    </p>
+    <p>
+    La aplicación funcionará como una herramienta de acompañamiento digital que permitirá establecer límites personalizados de uso, enviar recordatorios inteligentes y ofrecer métricas claras sobre el tiempo invertido en TikTok. Lo distintivo de esta solución es que integrará un sistema de recompensas para motivar y reconocer a los usuarios que cumplan con las metas de uso saludable, fomentando así la autorregulación y la disciplina digital de una forma positiva y atractiva.
+    </p>
+
+    <h3>1.2 Objetivo general</h3>
+    <p>
+    Desarrollar un sistema integral, en forma de aplicación móvil, orientado a ayudar a los jóvenes a gestionar de manera eficiente y saludable su uso de TikTok. La aplicación registrará y analizará la actividad del usuario en la plataforma, generando notificaciones oportunas y personalizadas que fomenten pausas, límites y hábitos de consumo equilibrado.
+    </p>
+
+    <h3>1.3 Objetivos específicos</h3>
     <ul>
-        <li>Definir los requisitos funcionales y no funcionales necesarios para implementar un sistema que permita monitorear y limitar el tiempo de uso de TikTok, recopilando datos precisos sobre el comportamiento del usuario.</li>
-        <li>Diseñar y estructurar una base de datos optimizada para almacenar de forma segura y organizada la información relacionada con las sesiones, interacciones y hábitos de consumo de la aplicación.</li>
-        <li>Diseñar y estructurar una base de datos optimizada para almacenar de forma segura y organizada la información relacionada con las sesiones, interacciones y hábitos de consumo de la aplicación.</li>
-        <li>Analizar los datos recopilados para proponer buenas prácticas y recomendaciones personalizadas que ayuden a reducir el consumo excesivo de la plataforma.</li>
-        <li>Desarrollar e integrar un sistema de recompensas y logros que motive a los usuarios a adoptar y mantener hábitos digitales responsables a través de incentivos positivos.</li>
+        <li>Definir los requisitos funcionales y no funcionales necesarios para implementar un sistema que permita monitorear y limitar el tiempo de uso de TikTok.</li>
+        <li>Diseñar y estructurar una base de datos optimizada para almacenar de forma segura y organizada la información relacionada con las sesiones, interacciones y hábitos de consumo.</li>
+        <li>Analizar los datos recopilados para proponer buenas prácticas y recomendaciones personalizadas que ayuden a reducir el consumo excesivo.</li>
+        <li>Desarrollar e integrar un sistema de recompensas y logros que motive a los usuarios a adoptar y mantener hábitos digitales responsables.</li>
+    </ul>
+
+    <h3>1.4 Actores del sistema</h3>
+    <ul>
+        <li><strong>Administrador:</strong> Gestiona usuarios, configura parámetros generales (límites de uso, criterios de recompensa), y supervisa el funcionamiento de la plataforma.</li>
+        <li><strong>Usuario Final:</strong> Descarga y utiliza la aplicación para monitorizar, regular y optimizar su tiempo en TikTok; consulta estadísticas y recibe notificaciones y recomendaciones.</li>
+        <li><strong>Sistema:</strong> Plataforma tecnológica que registra y almacena datos de actividad, genera alertas y administra el sistema de recompensas.</li>
     </ul>
 </section>
 
 <section>
-    <h2>1.4 Actores del Sistema</h2>
-    <ul>
-        <li><strong>Administrador:</strong> Tiene control total sobre la plataforma, gestiona la creación, modificación y eliminación de usuarios, configura los parámetros generales de funcionamiento del sistema como límites de uso, criterios de recompensas y ajustes de notificaciones, y supervisa el correcto funcionamiento de la aplicación y el cumplimiento de las políticas establecidas</li>
-        <li><strong>Usuario Final:</strong> Persona que descarga y utiliza la aplicación para monitorear, regular y optimizar su tiempo de uso en TikTok, interactúa con las funcionalidades de registro de actividad, recibe notificaciones, consultas estadísticas de consumo y accede al sistema de recompensas, además puede personalizar sus límites de uso y seguir recomendaciones para mejorar sus hábitos digitales
+    <h2>Capítulo 2: Insumos de Información</h2>
+    <p>
+    Para comprender los hábitos digitales de los usuarios y garantizar que la aplicación cumpla su propósito, se aplicó un formulario digital dirigido a adolescentes y jóvenes adultos. La recolección se realizó mediante Google Forms y permitió identificar patrones de uso, percepciones sobre el consumo y las funcionalidades más valoradas por los usuarios.
+    </p>
 
-</li>
-        <li><strong>Sistema:</strong> Plataforma tecnológica que ejecuta las funciones principales del proyecto, registra y almacena datos de actividad del usuario incluyendo duración de sesiones e interacciones, genera alertas y notificaciones basadas en el uso registrado, y administra el sistema de recompensas actualizando el estado de logros del usuario</li>
-    </ul>
+    <h3>Método de recolección</h3>
+    <p><strong>Herramienta:</strong> Google Forms. <strong>Objetivo:</strong> Conocer tiempo promedio diario, momentos de mayor consumo, percepción de uso excesivo y funcionalidades deseadas (alertas, recordatorios, recompensas, recomendaciones).</p>
+
+    <h3>Resultados y análisis (resumen)</h3>
+    <p>
+    Los resultados muestran que la mayoría de los encuestados son estudiantes y trabajadores que declaran pasar tiempo considerable en TikTok y sienten que a menudo superan el tiempo que desearían dedicar. Existe interés en recibir recordatorios (preferiblemente pausas activas y mensajes motivacionales) y en acceder a reportes semanales del uso. Además, los usuarios prefieren recomendaciones de actividades alternativas y un sistema de recompensas que reconozca hábitos saludables.
+    </p>
+
 </section>
 
 <section>
-    <h2>Capitlo 2 Requisitos Funcionales</h2>
-    
+    <h2>Capítulo 3: Requisitos del Sistema</h2>
+
     <div class="module">
         <div class="icon">🔐</div>
         <div>
-            <h4>Módulo de Autenticación</h4>
+            <h4>Módulo de Autenticación y Control de Sesiones</h4>
             <ul>
-                <li>Inicio de sesión con usuario y contraseña.</li>
-                <li>Bloqueo tras múltiples intentos fallidos.</li>
-                <li>Cierre automático por inactividad.</li>
+                <li>Permitir inicio de sesión con nombre de usuario y contraseña.</li>
+                <li>Validar credenciales y limitar acceso tras múltiples intentos fallidos.</li>
+                <li>Cerrar sesión automáticamente tras periodo de inactividad.</li>
             </ul>
         </div>
     </div>
@@ -164,9 +192,9 @@ A través de un diseño intuitivo, funciones de seguimiento en tiempo real y ele
         <div>
             <h4>Módulo de Registro de Uso</h4>
             <ul>
-                <li>Registro de tiempo total en TikTok.</li>
-                <li>Historial diario, semanal y mensual.</li>
-                <li>Clasificación del tiempo por categorías de contenido.</li>
+                <li>Registrar el tiempo total que el usuario dedica a TikTok.</li>
+                <li>Generar historial de uso diario, semanal y mensual.</li>
+                <li>Clasificar el tiempo según categorías de contenido visualizado.</li>
             </ul>
         </div>
     </div>
@@ -176,9 +204,9 @@ A través de un diseño intuitivo, funciones de seguimiento en tiempo real y ele
         <div>
             <h4>Módulo de Notificaciones</h4>
             <ul>
-                <li>Alertas sobre el límite de tiempo diario.</li>
-                <li>Recordatorios de pausas activas.</li>
-                <li>Mensajes motivacionales personalizados.</li>
+                <li>Enviar alertas cuando el usuario esté próximo a alcanzar o supere el límite diario configurado.</li>
+                <li>Generar recordatorios para pausas activas durante el uso.</li>
+                <li>Mostrar mensajes motivacionales personalizados según progreso.</li>
             </ul>
         </div>
     </div>
@@ -188,9 +216,9 @@ A través de un diseño intuitivo, funciones de seguimiento en tiempo real y ele
         <div>
             <h4>Módulo de Recomendaciones</h4>
             <ul>
-                <li>Sugerencias de actividades fuera de la app.</li>
-                <li>Guías de uso responsable.</li>
-                <li>Consejos basados en patrones de uso.</li>
+                <li>Sugerir actividades alternativas fuera de la aplicación.</li>
+                <li>Proporcionar guías de uso responsable de redes sociales.</li>
+                <li>Ofrecer consejos personalizados basados en patrones de uso.</li>
             </ul>
         </div>
     </div>
@@ -200,9 +228,9 @@ A través de un diseño intuitivo, funciones de seguimiento en tiempo real y ele
         <div>
             <h4>Módulo de Recompensas</h4>
             <ul>
-                <li>Premios virtuales por cumplir objetivos.</li>
-                <li>Niveles de logro desbloqueables.</li>
-                <li>Historial de recompensas obtenidas.</li>
+                <li>Otorgar premios virtuales a usuarios que cumplan objetivos de uso responsable.</li>
+                <li>Permitir desbloquear niveles de logro por hábitos constantes.</li>
+                <li>Almacenar historial de recompensas para consulta del usuario.</li>
             </ul>
         </div>
     </div>
@@ -211,35 +239,48 @@ A través de un diseño intuitivo, funciones de seguimiento en tiempo real y ele
 <section>
     <h2>Requisitos No Funcionales</h2>
     <ul>
-        <li><strong>Usabilidad:</strong>La aplicación móvil debe contar con interfaces limpias, intuitivas y fáciles de navegar para todo tipo de usuario. La aplicación móvil debe garantizar que las funciones principales sean accesibles en un máximo de tres pasos desde la pantalla inicial.
-</li>
-        <li><strong>Seguridad:</strong> La aplicación móvil debe implementar cifrado de datos para proteger la información personal del usuario. La aplicación móvil debe contar con control de acceso basado en credenciales únicas para cada usuario.
-</li>
-        <li><strong>Disponibilidad:</strong> La aplicación móvil debe estar disponible al menos el 99% del tiempo durante el año. La aplicación móvil debe contar con mecanismos de recuperación ante fallos para minimizar tiempos de inactividad.
-</li>
-        <li><strong>Compatibilidad:</strong> La aplicación móvil debe ser compatible con dispositivos Android e iOS en sus versiones actuales y anteriores inmediatas. La aplicación móvil debe permitir el acceso desde navegadores modernos con soporte para HTML5 y CSS3.
-</li>
-        <li><strong>Mantenibilidad:</strong>La aplicación móvil debe desarrollarse con una arquitectura modular que facilite la incorporación de nuevas funciones. La aplicación móvil debe estar documentada para permitir actualizaciones y mantenimiento de forma eficiente.
-</li>
-        <li><strong>Rendimiento:</strong> La aplicación móvil debe responder a las solicitudes del usuario en un tiempo máximo de 3 segundos. La aplicación móvil debe optimizar el uso de recursos para garantizar un funcionamiento fluido incluso en dispositivos de gama media.
-</li>
+        <li><strong>Usabilidad:</strong> Interfaz limpia e intuitiva; funciones principales accesibles en máximo tres pasos desde la pantalla inicial.</li>
+        <li><strong>Seguridad:</strong> Cifrado de datos y control de acceso con credenciales únicas.</li>
+        <li><strong>Disponibilidad:</strong> Disponibilidad objetivo del 99% anual y mecanismos de recuperación ante fallos.</li>
+        <li><strong>Compatibilidad:</strong> Soporte para Android e iOS y acceso desde navegadores modernos (HTML5/CSS3).</li>
+        <li><strong>Mantenibilidad:</strong> Arquitectura modular y documentación para facilitar actualizaciones.</li>
+        <li><strong>Rendimiento:</strong> Responder en un tiempo máximo de 3 segundos; optimización para dispositivos de gama media.</li>
     </ul>
 </section>
 
 <section>
-    <h2>Justificación</h2>
-    <p>La adicción a TikTok es un fenómeno global que afecta la salud mental y la productividad de millones de personas. Este sistema pretende abordar el problema de manera práctica, reduciendo la adicción sin perder el interés por la aplicación, y fomentando un uso equilibrado y saludable.</p>
+    <h2>Capítulo 4: Arquitectura de Software</h2>
+    <p>
+    La arquitectura se representó mediante diagramas de secuencia y procesos que muestran la interacción entre los módulos principales y responden a las acciones de los usuarios. Estos diagramas sirven como base para un diseño eficiente y coherente del sistema.
+    </p>
+
+    <h3>Enlaces a diagramas</h3>
+    <p>Diagrama de procesos y secuencias para cada módulo (links acortados y diagramas alojados según el documento original).</p>
 </section>
 
 <section>
-    <h2>7. Referencias Bibliográficas</h2>
+    <h2>Capítulo 5: Wireframes y mapa de navegación</h2>
+    <p>
+    Las vistas principales del prototipo (Figma) incluyen pantallas de autenticación, dashboard de tiempo, notificaciones, recomendaciones y recompensas. El flujo general inicia en el ingreso al sistema y continúa hacia el panel principal, historial, ajustes y sección de recompensas.
+    </p>
+</section>
+
+<section>
+    <h2>Justificación</h2>
+    <p>
+    La adicción a TikTok es un fenómeno que afecta la salud mental y la productividad. Este sistema pretende ofrecer herramientas prácticas para reducir la dependencia digital sin eliminar el valor recreativo de la plataforma, promoviendo una relación más equilibrada con las redes sociales.
+    </p>
+</section>
+
+<section>
+    <h2>Referencias Bibliográficas</h2>
     <div class="referencias">
-        <p><a href="https://www.anahuac.mx/blog/adiccion-a-las-redes-sociales">Anáhuac - Adicción a las redes sociales</a></p>
-        <p><a href="https://www.menteamente.com/blog-salud-mental/adiccion-redes-sociales">MenteAmente - Adicción a las redes sociales</a></p>
-        <p><a href="https://internetaddictsanonymous.org/es/internet-and-technology-addiction/social-media-addiction/adiccion-al-tik-tok">Internet Addicts Anonymous - Adicción al TikTok</a></p>
-        <p><a href="https://orbiumadicciones.com/noticias/tiktok-y-su-potencial-adictivo/">Orbium Adicciones - TikTok y su potencial adictivo</a></p>
-        <p><a href="https://www.lasexta.com/noticias/sociedad/tik-tok-red-social-mas-adictiva">La Sexta - TikTok, red social más adictiva</a></p>
-        <p><a href="https://www.ondacero.es/noticias/sociedad/adictos-tiktok-que-tiene-mayor-capacidad-adiccion-que-tabaco">Onda Cero - Adictos a TikTok</a></p>
+        <p><a href="https://www.anahuac.mx/blog/adiccion-a-las-redes-sociales" target="_blank">Anáhuac - Adicción a las redes sociales</a></p>
+        <p><a href="https://www.menteamente.com/blog-salud-mental/adiccion-redes-sociales" target="_blank">MenteAmente - Adicción a las redes sociales</a></p>
+        <p><a href="https://internetaddictsanonymous.org/es/internet-and-technology-addiction/social-media-addiction/adiccion-al-tik-tok" target="_blank">Internet Addicts Anonymous - Adicción al TikTok</a></p>
+        <p><a href="https://orbiumadicciones.com/noticias/tiktok-y-su-potencial-adictivo/" target="_blank">Orbium Adicciones - TikTok y su potencial adictivo</a></p>
+        <p><a href="https://www.lasexta.com/noticias/sociedad/tik-tok-red-social-mas-adictiva" target="_blank">La Sexta - TikTok, red social más adictiva</a></p>
+        <p><a href="https://www.ondacero.es/noticias/sociedad/adictos-tiktok-que-tiene-mayor-capacidad-adiccion-que-tabaco" target="_blank">Onda Cero - Adictos a TikTok</a></p>
     </div>
 </section>
 
@@ -248,6 +289,10 @@ A través de un diseño intuitivo, funciones de seguimiento en tiempo real y ele
         Ver Prototipo en Figma
     </a>
 </section>
+
+<footer>
+    <p>Documento generado a partir de: Requisitos_Interestructurante.pdf</p>
+</footer>
 
 </body>
 </html>
